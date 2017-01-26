@@ -9,3 +9,7 @@
 ```groovy
 final result = sh (returnStdout : true, script : "some sh with ${parameters}") 
 ```
+## Load pom file
+```groovy
+final pom = readMavenPom file: 'pom.xml'
+```
