@@ -17,7 +17,7 @@ final pom = readMavenPom file: 'pom.xml'
 ## Load external groovy file
 ```groovy
 final someInstance = load 'SomeGroovyFile.groovy'
-someInstance.doTheJob('somes tring')
+someInstance.doTheJob('some string')
 ```
 
 ## External documentation
