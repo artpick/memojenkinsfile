@@ -5,3 +5,7 @@
 * **JOB_NAME** : Name of the project of this build, such as "foo" or "foo/bar".
 * **JENKINS_URL** : Full URL of Jenkins, such as example.com:port/jenkins/ (NOTE: only available if Jenkins URL set in "System Configuration")
 
+## Scripts call with return
+```groovy
+final result = sh (returnStdout : true, script : "some sh with ${parameters}") 
+```
