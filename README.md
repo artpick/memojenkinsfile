@@ -13,3 +13,5 @@ final result = sh (returnStdout : true, script : "some sh with ${parameters}")
 ```groovy
 final pom = readMavenPom file: 'pom.xml'
 ```
+## External documentation
+* [Jenkins 2 Pipeline global explanations](http://www.slideshare.net/SlawaGiterman/delivery-pipeline-as-code-using-jenkins-20-pipeline)
