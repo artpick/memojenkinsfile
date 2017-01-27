@@ -19,6 +19,15 @@ final pom = readMavenPom file: 'pom.xml'
 final someInstance = load 'SomeGroovyFile.groovy'
 someInstance.doTheJob('some string')
 ```
+**Note:**
+_The external file loading does not seem to appreciate does not seem to loke calling "remote" closure, so we have to declare methodes like that:_
+```groovy
+def callSendEmails(String parsingResult){
+    sendTheFitnesseReportByEmail parsingResult
+}
+return this
+```
+_Always **return this**, plus declare methods with **def**_
 
 ## External documentation
 * [Jenkins 2 Pipeline global explanations](http://www.slideshare.net/SlawaGiterman/delivery-pipeline-as-code-using-jenkins-20-pipeline)
