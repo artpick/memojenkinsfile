@@ -29,5 +29,25 @@ return this
 ```
 _Always **return this**, plus declare methods with **def**_
 
+## Trigger Jenkins job from gitlab when dev branch is merged in a specific *master* branch
+```groovy
+import com.dabsquared.gitlabjenkins.trigger.filter.BranchFilterType
+
+pipeline {
+
+    agent any
+    triggers {
+        gitlab(triggerOnPush: true,
+                triggerOnMergeRequest: false,
+                skipWorkInProgressMergeRequest: true,
+                ciSkip: true,
+                branchFilterType: BranchFilterType.NameBasedFilter,
+                includeBranchesSpec: "master",
+                excludeBranchesSpec: '',
+                setBuildDescription: true)
+    }
+ }  
+```
+
 ## External documentation
 * [Jenkins 2 Pipeline global explanations](http://www.slideshare.net/SlawaGiterman/delivery-pipeline-as-code-using-jenkins-20-pipeline)
