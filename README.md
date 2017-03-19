@@ -13,14 +13,13 @@ final result = sh (returnStdout : true, script : "some sh with ${parameters}")
 ```groovy
 final pom = readMavenPom file: 'pom.xml'
 ```
-
 ## Load external groovy file
 ```groovy
 final someInstance = load 'SomeGroovyFile.groovy'
 someInstance.doTheJob('some string')
 ```
 **Note:**
-_The external file loading does not seem to appreciate does not seem to loke calling "remote" closure, so we have to declare methodes like that:_
+_The external file loading does not seem to appreciate calling "remote" closure, so we have to declare methods like that:_
 ```groovy
 def callSendEmails(String parsingResult){
     sendTheFitnesseReportByEmail parsingResult
