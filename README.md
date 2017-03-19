@@ -1,4 +1,4 @@
-# Memo for jenkins files
+# Memo for JenkinsFile
 
 ## Global variables
 * **BUILD_ID** : The current build ID, identical to BUILD_NUMBER for builds created in Jenkins versions 1.597+
